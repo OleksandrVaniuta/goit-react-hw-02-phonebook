@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ContactsList from './ContactsList/ContactsList';
 import Filter from './Filter/Filter';
 import ContactForm from './ContactForm/ContactForm';
+import css from './App.module.css';
 
 class App extends Component {
   state = {
@@ -47,7 +48,7 @@ class App extends Component {
     const visibleEl = this.visibleFilter();
 
     return (
-      <div>
+      <div className={css.box}>
         <h2>Phonebook</h2>
         <ContactForm onSubmit={this.addContact} onClone={this.onCotnactClone} />
         <h2>Contacts</h2>
